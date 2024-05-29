@@ -12,6 +12,9 @@ module.exports = {
         'azure': '#EAF4F4',
         'mint-cream': '#F6FFF8',
       },
+      fontFamily: {
+        'neue-haas-grotesk-display': ['neue-haas-grotesk-display', 'sans-serif'],
+      },
     },
   },
   plugins: [],
