@@ -1,0 +1,21 @@
+<div class="relative w-full overflow-hidden shadow-lg" (touchstart)="onStartTouch($event)" (touchmove)="onTouchMove($event)"
+  (touchend)="onTouchEnd()">
+  <div class="flex transition-transform duration-500" [style.transform]="getTransform()">
+    @for (image of imagesPaths; track image.id)
+    {
+    <div class="w-full flex-shrink-0">
+      <img class="w-full" [src]="image.name">
+    </div>
+    }
+  </div>
+
+  <!-- Indicator -->
+  <div class="absolute bottom-0 left-0 w-full h-12 flex justify-center items-center">
+    <div class="flex ">
+      @for (image of imagesPaths; track image.id)
+      {
+      <div [class]="currentIndex === image.id ? 'indicator active' : 'indicator'"></div>
+      }
+    </div>
+
+  </div>
